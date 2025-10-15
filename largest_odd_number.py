@@ -64,3 +64,11 @@ def largeOddNum(s):
     return s[i:ind + 1]
 print(largeOddNum("0032579"))
 print(largestOddNumber_brute_force("0032579"))
+
+# most optimized 
+def largestOddNumber(self, num: str) -> str:
+    n=len(num)
+    for i in range(n-1,-1,-1):
+        if num[i] in "13579":
+            return num[:i+1]
+    return ""
